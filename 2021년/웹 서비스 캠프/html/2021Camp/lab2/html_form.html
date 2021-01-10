@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color:rgb(236, 161, 158);">
+
+    <h2 style = "text-align: center; color:blue;">Sign in</h2>
+    
+    <form action="/action_page.php" autocomplete="on">
+    <fieldset>
+    <legend> Form </legend>
+    <fieldset>
+    <legend> Basic information </legend>
+      <label for="ID">ID:</label><br>
+      <input type="text" id="ID" name="ID" value=""><br>
+      
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd" value=""><br>
+      
+      <label for="pwd_check">Password(check):</label><br>
+      <input type="password" id="pwd_check" name="pwd_check" value=""><br><br>
+      
+      <label for = "Bir"> Birthday: </label>
+      <input type = "date" id = "Bir" name = "Bir" value = "Bir"><br><br>
+      
+      <label for="email"> Email:  </label>
+      <input type = "email" id = "email" name = "email"> <br><br>
+      
+      
+      <label for = "phone"> Phone number: </label>
+      <input type = "tel" id = "phone" name = "phone" pattern = "[0-9]{3}-[0-9]{4}-[0-9]{4}" value = "write hyper(-)"><br><br>
+      
+      <label for = "homepage"> Add your url: </label>
+      
+      <input type = "url" id = "homepage" name = "homepage"> <br><br>
+      
+      
+      <label for = "file"> Upload your photo: </label> <br>
+      
+      <input type = "file" id = "file" name = "file"><br><br>
+      
+      </fieldset>
+    
+      
+      <h3 style = "border: 2px solid black;"> Whether you are computer or not </h3>
+      <label for="month"> Q1: Select this Year & Month</label><br>
+      <input type = "month" id = "month" name = "month">
+      <br><br>
+      
+      <label for "num"> Q2: 5 - 2 = ? </label> <br>
+      <input type = "number" id = "num" name = "num" min = "1" max = "5"><br><br>
+      
+      <p> Q3: The professor's name who teaches this camp is <i style="font-size: 20px;"> So-Yeon Jang. </i> </p>
+      <input type = "radio" id = "True" name = "pro">
+      <label for = "True"> True </label> <br>
+      <input type = "radio" id = "False" name = "pro">
+      <label for = "False"> False </label> <br><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+        <input type="reset">
+      </fieldset>
+      
+      
+      <h2 style="text-align: center;"> 새해 복 많이 받으세요!</h2>
+      <img src="../img/newyear.png">
+    </form> 
+        
+
+
+</body>
+</html>

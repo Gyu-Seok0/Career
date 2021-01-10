@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+
+    }
+
+    .header{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        line-height: 5px; /* 줄간격 */
+        margin: 5px;
+    }
+
+    .row:after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+
+    .tag1 ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tag1 li{
+        background-color: lightgray;
+        padding: 5px;
+        margin-bottom: 3px;
+        border-radius: 10px;
+        border: 1px solid gray;        
+    }
+
+    .tag1 li:hover{
+        background-color: white;
+    }
+
+
+    [class *= "col-"]{
+        float: left;
+        padding:15px;
+    }
+
+    @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    }
+    @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
+
+    .tag3{
+    background-color: #33b5e5;
+    color: white;
+    padding: 10px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    }
+
+    .tag3 p{
+        padding-bottom: 100px;
+    }
+
+    .footer2{
+        background-color: lightgray;
+        border: 1px solid black;
+        margin: 2px;
+        padding: 2px;
+        text-align: center;
+        font-size: small;
+        position: relative;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1> Welcome to My Hompage</h1>
+        <p> Use the menu to select different Stylesheets</p>
+    </div>
+
+    <div class="row">
+    <div class="tag1 col-3 col-s-3">
+        <ul>
+            <li> Stylesheet1</li>
+            <li> Stylesheet2</li>
+            <li> Stylesheet3</li>
+            <li> Stylesheet4</li>
+            <li> No Stylesheet</li>
+        </ul>
+    </div>   
+    
+    <div class="tag2 col-6 col-s-6">
+        <h1> Same page different Stylesheets</h1>
+        <p> This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
+        <br>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet1,</a>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet2,</a>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet3,</a>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet4.</a>
+        <h2> No Styles</h2>
+        <p>This page uses DIV elements to group different sections of the HTML page. 
+            Click here to see how the page looks like with no stylesheet:
+        </p>
+        <a href="https://www.w3schools.com/css/demo_default.htm">No Stylesheet</a>
+     </div>
+
+     <div class="tag3 col-3 col-s-12">
+        <h2 style="font-size: 150%;"> Side-Bar</h2>
+        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+     </div>
+    
+    </div>
+    
+
+
+ 
+    <div class="footer2">
+        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+
+    </div>
+
+
+
+    
+</body>
+</html>
