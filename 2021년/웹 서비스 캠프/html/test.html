@@ -1,186 +1,120 @@
+<!--
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Document</title>
+    <style>
+        #header{
+            display: flex;
+            background-color: skyblue;
+            justify-content: space-between;
+        }
+        #header >p{
+            text-align: center;
+        }
+
+        #tag2{
+            display: flex;
+        }
+
+        #tag2 >p{
+            margin: 10px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        @media screen and (max-width: 600px){
+                #header{
+                    display: block;
+                }
+                
+
+                #tag2{
+                    display: block;
+                }
+
+        }
 
 
 
 
+    </style>
 
-
-</style>
 </head>
 
 
-
 <body>
-<h1>This Heading is Black with White Text</h1>
+   <div id=header>
+    <div id= "tag1">
+        <h1> DreamCoding</h1>
+    </div>
+   
+    <div id= "tag2">
+        <p> home </p>
+        <p>Galley</p>
+        <p>Wedding</p>
+        <p>FAQ</p>
+        <p>Booking</p>
+    </div>
 
-<p class = "p1">This page has a grey background color and a blue text.</p>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <div id = "tag3">
+        <i class="fab fa-instagram-square"></i>
+    </div>
+</div>
 
-<p class = "p1">Another paragraph.</p>
+</body>
+</html>
+여기서부터 다시 짜보기 -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <title>Youtube 강의 </title>
+    <script src="https://kit.fontawesome.com/b99ddda065.js" crossorigin="anonymous"></script>
 
+</head>
+<body>
+
+    <nav id="header">
+    <nav id="name">
+        <i class="fas fa-compass"></i>
+        <a>DreamCㅇㄴㅇㄴㅇㄴodeeing</a>
+    </nav>
+    
+    <nav >
+        <ul id="menu">
+            <li><a href=""> Home</a></li>
+            <li><a href=""> Galley</a></li>
+            <li><a href=""> Wedding</a></li>
+            <li><a href="">  FAQ</a></li>
+            <li><a href="">  Booking</a></li>
+        </ul>
+    </nav>
+
+    <nav id="icons">
+        <a href=""> 이모티콘1 </a>
+        <a href=""> 이모티콘2 </a>
+    </nav>
+
+    <!--
+    <nav id = "toogleBtn">
+        <a> 이모티콘3 </a>
+    </nav>
+    -->
+</nav>
 
 
 
 </body>
 </html>
-
-<!--
-17) title
-
-<title>HTML Elements Reference</title> // 헤드 바로 밑에 작성하고, 이 코드가 어떤 내용인지를 제목작성!
-
-
-
-16) font
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">  // 외부 폰트 받아오기
-
-
-<style>
-	body{
-    font-family: "Sofia", sans-seif; // 폰트이름, 집합이름(?)
-    font-style: oblique; //기울기
-    font-weight: bold;   // 굵게
-    font-variant: small-caps; //대문자인데 글자 크기 작게
-
-}
-
-
-
-
-15) space
-	h1{
-    text-decoration: underline; /* 줄긋기 */
-    text-transform: Capitalize; 
-    text-indent: 5px;
-    letter-spacing:3px; /*글자간격*/
-    line-height: 2;  /*줄간격*/
-    word-spacing: 1px; /*단어간격*/
-    text-shadow: 2px 2px 5px red; /*(x,y)를 의미한다. */
-    }
-
-14) color
-	body{
-    	background-color: lightgrey;
-        color: blue; #전체를 blue로
-    }
-    
-    h1{
-  		color: White;
-        background-color:black; #h1의 배경색을 맞춰줌
-  	}
-
-
-
-
-13) outline
-
-
-line의 바깥쪽 영역으로, border의 바깥 영역이라고 생각하면 된다!
-p.inset{
-	border: 2px inset black;
-    outline-offset: 150px; 		#border와 oultine의 간격!
-}
-
-
-
-12) margin
-div{
-	width: 200px; (가로의 길이를 고정)
-    padding: 20px(위아래) 30px(왼쪽오른쪽) 
-}
-
-p.exl{
-	margin-left: inherit; (상위 parent의 margin-left를 물려받는다
-    }
-
-
-
-
-
-11) border
-p.short2{
-	border-style: dotted dashed solid double;    #시계방향으로 여러개 적용가능!
-    border-bottom: 6px dashed; #한번에 여러개 적용가능
-    
-    border-radius: 200px; # 둥글게
-}
-
-
-
-
-10) background shorthand(한줄로 나열 가능)
-background: url("img_tree.png") no-repeat right top;
-
-
-9) background
-body{
-	background-image: url("img_tree.png"); #파일 불러오기
-    background-repeat: no-repeat; #반복결정
-    
-	background-position: left top; #위치결정
-}
-
-
-
-
-8) div: 일종의 container라고 생각
-
-<div class = "first">
-<h1>Hello World!</h1>
-</div>
-
-
-
-7) 투명도
-방법1: opacity: 1; (0~1사이 값을 가짐)
-방법2: rgba(0,128,0,0.3) 
-
-
-
-6) background-color:hsl
-body에만 사용가능한 줄 알았는데, 아니었다.
-
-h1{
-	background-color: hsl(0, 0% 	,80%);
-    
-}
-
-
-
-5) 네모박스 만들기
-border:2px solid Tomato;
-
-
-
-4) external css 방법
-<link rel="styffflesheet" href="mystyle.css">
-
-
-
-3) 여러 개의 class를 상속받을 수 있다.
-<p class = "center large"> changed? </p>
-
-
-
-2) class로 select
-.center {
-	text-align: center;
-    color: red;
-}
-
-<p class = "center"> hello from the other side </p>
-
-
-
-1) id로 select
-#paral {
-	font-family: verdana;
-    font-size: 20px;
-    color: red;
-}
-
-<p id = "paral">This is a paragraph.</p>
