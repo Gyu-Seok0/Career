@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #4CAF50;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <h1 style="text-align: center;"> Lab7 (Type Conversion ~ JSON) </h1>
+    <br><br>
+    <h2> Type conversion</h2>
+    <p id = "1"></p>
+    <p id = "2"></p>
+    <script>
+        var x = 123;
+        document.getElementById("1").innerHTML = String(x) + 123;
+        document.getElementById("2").innerHTML = x + 123;
+    </script>
+
+    <h2> bitwise operator </h2>
+    <script>
+
+        document.write("5 & 1 = ", 5 & 1, "<br>");
+        document.write( "5 | 1 = ", 5 | 1 ,"<br>");
+        document.write( "5<<2 = ",5 << 2, "<br>");
+
+    </script>
+
+    <h2> Id/ password 받기 </h2>
+    <p>ID(5자이상)</p>
+    <input id = "ID" type = "text"> 
+
+    <p> pwd (6자이상) </p>
+    <input id = "pwd" type = "password" value = "6자 이상">
+    <br><br>
+    <button type = "button" onclick = "func()"> 로그인 </button>
+
+    <button> 취소  </button>
+
+    <p id = "demo" style="color:lightgoldenrodyellow; background-color: black;"> </p>
+
+
+    <script>
+        function func(){
+        var message, id, pwd;
+        message = document.getElementById("demo");
+        id = document.getElementById("ID").value.toString();
+        pwd = document.getElementById("pwd").value.toString();
+
+    
+        message.innerHTML = "";
+        if (id.length < 5) message.innerHTML += "that ID is too short";
+        if (pwd.length < 6) message.innerHTML +=  " and pwd is too short";
+        }        
+    </script>
+
+    <h2> alert button </h2>
+    <button onclick="alert_func()">  Alert button </button>
+    <script>
+        function alert_func(){
+            alert("Alert!");
+        }
+
+    </script>
+
+    <h2> let 사용하기 or not </h2>
+    <script>
+        var x = 10;
+        {
+            let x = 3;
+        }
+        document.write("original x = ",x, "<br>");
+        document.write("(with let) x = ", x, "<br>");
+
+        {
+            x = 3;
+        }
+
+        document.write("(without let) x = ",x);
+
+
+    </script>
+    
+    <h2> Class 사용하기  </h2>
+    <p id = "car"></p>
+    <script>
+
+        document.getElementById("car").innerHTML = "hedllo";
+
+
+        class Car{
+            constructor(name, year){
+                this.name = name;
+                this.year= year;
+            }
+            
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.year;
+                }
+            }
+        let myCar = new Car("Ford", 2015); // new를 빼먹으면 안된다. 
+
+        document.getElementById("car").innerHTML = "my car is " + myCar.age() + " years old."
+
+    </script>
+
+
+    
+
+
+
+</body>
+</html>

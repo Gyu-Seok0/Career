@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            display: inline-block;
+        }
+  
+        h1, h2{
+            color: red;
+            font-size: 150%;
+            
+        }
+
+
+        body{
+            background-color: #d14836;
+        }
+
+        .header{
+            line-height: 10px;
+            font-size: 250%;
+            color: white;
+        }
+
+        .row:after{
+            content: "";
+            display: table;
+            clear:both;
+        }
+
+        .col1{
+            float: left;
+            width: 60%;
+            background-color: white;
+
+        }
+
+        .col2{
+            float: left;
+            width: 40%;
+            height: 400px;
+            background-color: white;
+        }
+
+        .col3{
+            float:left;
+            background-color: #F6DAD7;
+        }
+        
+
+
+
+
+        ul{
+            margin: 0;
+            padding: 0;
+            float: right;
+            list-style-type: none;
+        }
+
+        li{
+            border-radius: 10px;
+            background-color: #d14836;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            width: 155px;
+            border: 1px solid #d14836;
+        }
+    
+        li:hover{
+            background-color:white;
+        }
+        li:hover a{
+            color: #d14836;
+        }
+
+        a{
+            color:white;
+            text-decoration: none;
+        }
+    
+ 
+
+        .footer{
+            color:white;
+            text-align: center;
+            font-size: small;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="header">
+        <h1 style="color: white;"> Welcome to My Hompage</h1>
+        <p> Use the menu to select different Stylesheets</p>
+    </div>
+
+    <div class="row">
+    <div class="col1">
+        <h1> Same page different Stylesheets</h1>
+        <p> This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
+        <br>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet1,</a>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet2,</a>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet3,</a>
+        <a href="https://www.w3schools.com/css/demo_default.htm">Stylesheet4.</a>
+
+        <h2> No Styles</h2>
+        <br>
+        <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+        </p>
+        <br>
+        <a href="https://www.w3schools.com/css/demo_default.htm">No Stylesheet</a>
+    </div>
+
+    <div class="col2">
+        <ul>
+            <li> <a href="http://kbin6961.dothome.co.kr/2021Camp/lab3/css_style1.html">Stylesheet1 </a></li>
+            <li> <a href="http://kbin6961.dothome.co.kr/2021Camp/lab3/css_style2.html"> Stylesheet2 </a></li>
+            <li> <a href="http://kbin6961.dothome.co.kr/2021Camp/lab3/css_style3.html"> Stylesheet3 </a> </li>
+            <li> <a href="http://kbin6961.dothome.co.kr/2021Camp/lab3/css_style4.html">Stylesheet4 </a></li>
+            <li> <a href="http://kbin6961.dothome.co.kr/2021Camp/lab3/css_nostyle.html">No Stylesheet </a></li>
+        </ul>
+    </div>
+
+    <div class="col3">
+     <h2> Side-Bar</h2>
+        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+
+    </div> <!--상당부분 까지 --> 
+
+   
+
+    <div class="footer">
+        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+
+    </div>
+
+
+
+    
+</body>
+</html>

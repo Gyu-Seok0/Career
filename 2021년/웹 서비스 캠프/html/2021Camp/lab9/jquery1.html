@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+        width: 50%;
+        }
+
+        #panel {
+        padding: 50px;
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Lab9 jquery </h1>
+    <br><br><br>
+    <h1> click and hide</h1>
+    <button id = "hide"> hide the p tag</button>
+    <button id = "show"> show the p tag</button>
+ 
+    <p>test1</p>
+    <p>test2</p>
+    <p>test3</p>
+    
+    <h1> double - click the p tag </h1>
+    <p> test1</p>
+    <p> test2</p>
+    <p> test3</p>
+
+
+    <h1> mouse enter </h1>
+    <p id ="point" style="width: 0;"> pointing here </p>
+
+    <h1> mouse down </h1>
+    <p id ="down"> pointing here and click the mouse right button</p>
+
+
+    <h1> focus </h1>
+    name: <input type="text">
+    <br>
+    password: <input type="text"> 
+
+    <h1> hide: slowly </h1>
+    <p> click below p tags </p>
+    <div id="slow">   
+    <p> test1 </p>
+    <p> test2 </p>
+    <p> test3 </p>
+    </div>
+
+    <h1> Fade toggle </h1>
+    <button id="toggle"> toggle </button>
+    <div id="toggle_p">
+        <p>test1</p>
+        <p>test2</p>
+        <p>test3</p>
+    </div>
+
+
+    <button id = "toggle2">Click to fade toggle in boxes</button><br><br>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+       
+    <h1> Slide toggle </h1>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+
+
+    <h1> move the rectangle </h1>
+    <button id="move">Start Animation</button>
+    <div id = "rect" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    
+
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+    });
+    $(document).ready(function(){
+        $("#show").click(function(){
+            $("p").show();
+        });
+    });
+
+    $(document).ready(function(){
+        $("p").dblclick(function(){
+            $(this).hide();
+        });
+    });
+    /* poniting */
+    $(document).ready(function(){
+        $("#point").mouseenter(function(){
+            alert("if you don't want this message, Do not pointing here");
+        });
+    });
+
+    /* 하다보니까, jquery를 하나로 합쳐서 할 수 있겠다는 생각이 들었다.
+        여기서 부터는 하나로 합쳐서 진행하겠다! 
+    */
+
+    $(document).ready(function(){
+        $("#down").mousedown(function(){
+            alert("mouse down")
+            });
+
+        $("input").focus(function(){
+        	$(this).css("background-color","yellow");
+        });
+        $("input").blur(function(){
+        	$(this).css("background-color","green");
+        });
+
+        $("#slow >p").click(function(){
+            $(this).hide(1000);
+        });
+
+        $("#toggle").click(function(){
+            $("#toggle_p").fadeToggle(1000);
+        });
+ 
+        $("#toggle2").click(function(){
+            $("#div1").fadeToggle();
+            $("#div2").fadeToggle(1000);
+            $("#div3").fadeToggle(2000);
+            });
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+
+        $("#move").click(function(){
+            $("#rect").animate({left: '250px', top:'1780px',height:'200px',width:'200px'});
+        });
+    });
+
+
+
+
+
+</script>

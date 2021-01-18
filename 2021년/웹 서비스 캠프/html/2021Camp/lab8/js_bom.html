@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_bom.html</title>
+    <style>
+        body{
+            background-color: #98FB98;
+        }
+        table, th, td{
+            border: 1px solid black;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="demo">
+    <h1 style="text-align: center;">  BOM  </h1>
+
+    <h2>screen</h2>
+    <p id="screen"></p>
+    
+    <h2>location</h2>
+    <button onclick = "func()"> if try it, go to naver  </button>
+    <p id = "loc"> </p>
+
+    <h2>location2</h2>
+    <button onclick = "func2()"> if try it, go to back history  </button>
+    <p id = "loc2"> </p>
+
+    <h2> navigator </h2>
+    <p id ="navigator"></p>
+
+    <h2>confirm box</h2>
+    <button onclick="check()"> Try it </button>
+    <p id = "confirmed"> </p>
+
+
+    <h2>prompt</h2>
+    <button onclick="prom()"> try it </button>
+    <p id = "prom"></p>
+
+    <h2>set time out</h2> 
+    <button onclick = "myVar = setTimeout(hello, 3000)"> Try it and wait 3 seconds </button>
+    <button onclick = "clearTimeout(myVar)"> stop it </button>
+
+    <!-- 왜 안돼지? ... 해결했습니다. -->
+
+    <h2>setinterval</h2>
+    <p id = "set1"></p>
+    <button onclick= "clearInterval(time)"> stop time </button>
+    <button onclick= "setInterval(myTimer,1000)"> restart </button>
+
+    <h2> Ajax </h2>
+  
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+     </div>
+
+
+     <h2>XML</h2>
+     <button onclick="loadCD()"> Try it </button>
+     <table id = "table"></table>
+</body>
+
+
+    <script>
+        document.getElementById("screen").innerHTML = "this width is " + screen.height;
+        
+        function func(){
+        document.getElementById("loc").innerHTML = window.location.assign("https://www.naver.com");
+        }
+
+        function func2(){
+            document.getElementById("loc2").innerHTML = window.history.back();
+        }
+
+        document.getElementById("navigator").innerHTML = window.navigator.appVersion;
+
+        function check(){
+            var txt;
+            if (confirm("press a button (confirm 안에  문구를 넣는구나)")){
+                txt = "True";
+            }
+            else{
+                txt = "false";
+            }
+            document.getElementById("confirmed").innerHTML = txt;
+        }
+
+        function prom(){
+            var person = prompt("write your name");
+            document.getElementById("prom").innerHTML = person;
+        }
+
+        function hello(){
+            alert("Welcome");
+        }
+        
+        /* timer */
+        var time = setInterval(myTimer, 1000); // 함수 호출할때, ()를 사용하지 않는 구나. .
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("set1").innerHTML = d.toLocaleTimeString();
+        }
+
+        /* Ajax */
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.open("GET", "ajax_info.html", false); // true이면 동기식, false이면 비동기식 
+          xhttp.send();
+          document.getElementById("demo").innerHTML =
+            xhttp.responseText;
+        
+        }
+
+
+        function loadCD() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+            }
+        };
+        xhttp.open("GET", "cd_catalog.xml", true);
+        xhttp.send();
+        }
+
+
+        function myFunction(xml) {
+        var i;
+        var xmlDoc = xml.responseXML;
+        var table="<tr><th>Artist</th><th>Title</th></tr>";
+        var x = xmlDoc.getElementsByTagName("CD");
+        for (i = 0; i <x.length; i++) { 
+            table += "<tr><td>" +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+        document.getElementById("table").innerHTML = table;
+        }
+</script>
+        
+    </script>
+</html>
