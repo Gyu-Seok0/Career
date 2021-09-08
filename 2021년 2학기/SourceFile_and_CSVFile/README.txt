@@ -1,0 +1,15 @@
+실행순서
+<전처리>
+1) make_police9, make_police10, make_police12, make_total: 데이터 전처리 과정
+(전처리 과정에서 CSV파일의 경로설정 문제가 발생할 수 있으므로, 작업 디렉토리의 위치에 따른 수정이 필요할 수 있습니다.)
+
+<모델링>
+2) [No_PCA]다중회귀분석: Original Data로 다중회귀분석 진행, Stepwise 진행
+3) [PCA]다중회귀분석: PCA 변수 7개로 다중회귀분석
+4) 앙상블모델
+5) Neural_Net
+
+<결과제출>
+6) 결과제출
+
+
